@@ -1,0 +1,13 @@
+{
+  "name": "reactbasics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://bitbucket.org/Liyassudeen/reactbasic",
+  "author": "Liyassudeen <mohamed.m@skava.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": { 
+    "test": "node test",
+     "index": "node index"
+  }
+}
