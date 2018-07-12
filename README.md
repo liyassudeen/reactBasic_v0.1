@@ -31,3 +31,7 @@ spread operator(...):
                 "transform-object-rest-spread"
             ]
         }
+Preset & Plugins:
+-----------------
+-> Preset is a collection of plugins.
+-> Plugin is a part of preset.
