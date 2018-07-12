@@ -1,7 +1,7 @@
 import React from 'react';
 
 class App extends React.Component {
-   constructor(props) {
+    constructor(props) {
 	   super(props);
 	   this.state = {counter : 0};
 	   this.handleClick = this.handleClick.bind(this);
@@ -13,6 +13,13 @@ class App extends React.Component {
     const Style = {
         color: 'green'
     };
+    const {
+        one,
+        two,
+        ...remainingProps
+    } = this.props
+    
+    console.log(remainingProps)
       return (
          <React.Fragment>
 			 <div style={Style}>
