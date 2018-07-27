@@ -7,7 +7,20 @@ class App extends React.Component {
 	   this.handleClick = this.handleClick.bind(this);
    }
    handleClick() {
-	   this.setState({counter: this.state.counter + 1})
+       this.setState({counter: this.state.counter + 1})
+       console.log('Counter: ', this.state.counter); //Changes will not reflect suddenly
+       fetch('http://localhost:5000/graphql', {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'Access-Control-Allow-Origin': '*'
+        },
+        body: JSON.stringify({query: "{ message }"})
+      })
+        .then(r => r.json())
+        .then(data => console.log('data returned:', data));
    }
    render() {
     const Style = {
